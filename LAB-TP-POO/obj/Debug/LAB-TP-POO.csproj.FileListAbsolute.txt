@@ -1,0 +1,7 @@
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\LAB-TP-POO\bin\Debug\LAB-TP-POO.exe.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\LAB-TP-POO\bin\Debug\LAB-TP-POO.exe
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\LAB-TP-POO\bin\Debug\LAB-TP-POO.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\LAB-TP-POO\obj\Debug\LAB-TP-POO.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\LAB-TP-POO\obj\Debug\LAB-TP-POO.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\LAB-TP-POO\obj\Debug\LAB-TP-POO.exe
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\LAB-TP-POO\obj\Debug\LAB-TP-POO.pdb
