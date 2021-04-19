@@ -1,0 +1,7 @@
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-Exceptions\obj\Debug\TP-Exceptions.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-Exceptions\obj\Debug\TP-Exceptions.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-Exceptions\bin\Debug\TP-Exceptions.exe.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-Exceptions\bin\Debug\TP-Exceptions.exe
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-Exceptions\bin\Debug\TP-Exceptions.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-Exceptions\obj\Debug\TP-Exceptions.exe
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-Exceptions\obj\Debug\TP-Exceptions.pdb
