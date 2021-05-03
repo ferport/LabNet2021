@@ -1,0 +1,12 @@
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\bin\Debug\TPEntityFramework.Entities.dll.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\bin\Debug\TPEntityFramework.Entities.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\bin\Debug\TPEntityFramework.Entities.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\obj\Debug\TPEntityFramework.Entities.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\obj\Debug\TPEntityFramework.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\obj\Debug\TPEntityFramework.Entities.csproj.CopyComplete
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\obj\Debug\TPEntityFramework.Entities.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Entities\obj\Debug\TPEntityFramework.Entities.pdb
