@@ -36,6 +36,7 @@ bin
 bin/
 Bin/
 [Oo]bj/
+.[Oo]bj/
 Obj
 Obj/
 obj
@@ -371,3 +372,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+.dll
