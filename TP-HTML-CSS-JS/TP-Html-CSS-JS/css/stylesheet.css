@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(148, 255, 218, 0.4); 
+}
+
+
+
+.contentainer{
+    margin: auto;
+    padding: auto;
+    width: 75%;
+    background-color: rgba(157, 189, 248, 0.5);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 35px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#formulario{
+    width: 60%;
+    background-color: rgba(148, 255, 218, 0.6);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+}
+
+.btn{
+    border: solid black 0.5px;
+    background-color: rgba(255, 244, 227,0.6);
+}
+
+#formulario h4{
+    margin-left: 10px;
+    font-size: 30px;
+    
+}
+
+#info{
+    margin-left: -10px !important;
+    width: 360px;
+    margin-top: 10px;
+}
+
+#formularioContacto{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+#formulario p{
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+#separador{
+    height: 20px;
+}
+
+#errorNombre{
+    display: none;
+}
+
+#errorApellido{
+    display: none;
+}
+
+.msjError{
+    color: crimson;
+    font-weight: 600;
+    font-size: 13px;
+}
