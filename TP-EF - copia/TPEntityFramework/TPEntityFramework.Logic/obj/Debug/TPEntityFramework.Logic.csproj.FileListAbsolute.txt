@@ -1,0 +1,36 @@
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Logic.dll.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Logic.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Logic.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Data.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Entities.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Data.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Data.dll.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Entities.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Entities.dll.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.xml
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.csproj.CopyComplete
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Logic.dll.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Logic.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Logic.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Data.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Entities.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Data.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Data.dll.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Entities.pdb
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\TPEntityFramework.Entities.dll.config
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.xml
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.csproj.CopyComplete
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.dll
+C:\Users\Fernando\Desktop\Neoris LAB\LabNet2021\TP-EF - copia\TPEntityFramework\TPEntityFramework.Logic\obj\Debug\TPEntityFramework.Logic.pdb
