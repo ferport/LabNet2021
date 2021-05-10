@@ -1,0 +1,46 @@
+﻿@model TPMVC.MVC.Models.EmployeesView
+
+@{
+    ViewBag.Title = "Employee Page";
+}
+
+<link rel="stylesheet" href="~/Content/formStyle.css"/>
+
+
+@using (Html.BeginForm("InsertAndUpdate", "Employee", FormMethod.Post, new { id = "employeeForm" }))
+{
+    if (Model.id > 0)
+    {
+        <h1>Modificar empleado</h1>
+    }
+    else
+    {
+        <h1>Insertar empleado</h1>
+    }
+    <label>Nombre</label> @Html.TextBoxFor(e => e.firstName)
+    <br />
+    <div id="nameError">
+        <span class="msjError">El nombre es obligatorio</span>
+        <br />
+    </div>
+    <div id="nameErrorMax">
+        <span class="msjError">El nombre no puede tener mas de 10 caracteres</span>
+        <br />
+    </div>
+    <label>Apellido</label> @Html.TextBoxFor(e => e.lastName)
+    <br />
+    <div id="lastNameError">
+        <span class="msjError">El apellido es obligatiorio</span>
+        <br />
+    </div>
+    <div id="lastNameErrorMax">
+        <span class="msjError">El apellido no puede tener mas de 20 caracteres</span>
+        <br />
+    </div>
+    <input type="submit" value="Guardar" id="submit" />
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript" src="~/Scripts/employeeValidation.js"></script>
+

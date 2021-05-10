@@ -1,0 +1,17 @@
+﻿#idError,
+#idErrorLength,
+#idErrorNumber,
+#descriptionError,
+#descriptionErrorMax,
+#nameError,
+#nameErrorMax,
+#lastNameError,
+#lastNameErrorMax {
+    display: none;
+}
+
+.msjError {
+    color: crimson;
+    font-weight: 600;
+    font-size: 13px;
+}

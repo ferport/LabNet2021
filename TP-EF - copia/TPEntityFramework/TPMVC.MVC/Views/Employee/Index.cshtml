@@ -1,0 +1,38 @@
+﻿@model List<TPMVC.MVC.Models.EmployeesView>
+
+@{
+    ViewBag.Title = "Employee Page";
+}
+
+<h1>Empleados</h1>
+
+
+<table class="table-responsive table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employeesView in Model)
+        {
+        <tr>
+            <th scope="row">@employeesView.id</th>
+            <td>@employeesView.firstName</td>
+            <td>@employeesView.lastName</td>
+            <td>
+                @Html.ActionLink("Borrar", "Delete", new { id = employeesView.id }) /
+                @Html.ActionLink("Modificar", "InsertAndUpdate", new { id = employeesView.id })
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Insertar nuevo empledo", "InsertAndUpdate", "Employee")
+</div>

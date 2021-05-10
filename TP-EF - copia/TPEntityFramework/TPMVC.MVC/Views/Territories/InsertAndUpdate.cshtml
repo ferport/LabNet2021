@@ -1,0 +1,53 @@
+﻿@model TPMVC.MVC.Models.TerritoriesView
+
+@{
+    ViewBag.Title = "Territorie Page";
+}
+
+<link rel="stylesheet" href="~/Content/formStyle.css"/>
+
+@using (Html.BeginForm("InsertAndUpdate", "Territories", FormMethod.Post))
+{
+    if (Model.id != null)
+    {
+        <h1>Modificar territorio</h1>
+
+        @Html.HiddenFor(t => t.id)
+    }
+    else
+    {
+        <h1>Insertar territorio</h1>
+
+        <label>ID</label> @Html.TextBoxFor(t => t.id)
+    }
+
+    <br />
+    <div id="idError" >
+        <span class="msjError">El id es obligatiorio</span>
+        <br />
+    </div>
+    <div id="idErrorLength">
+        <span class="msjError">El ID debe tener 5 caracteres</span>
+        <br />
+    </div>
+    <div id="idErrorNumber">
+        <span class="msjError">El ID debe contener solo numeros</span>
+        <br />
+    </div>
+    <label>Descripcion</label> @Html.TextBoxFor(t => t.description)
+    <br />
+    <div id="descriptionError">
+        <span class="msjError">La descripcion es obligatioria</span>
+        <br />
+    </div>
+    <div id="descriptionErrorMax">
+        <span class="msjError">La descripcion no debe tener mas de 50 caracteres</span>
+        <br />
+    </div>
+    <input type="submit" value="Guardar" id="submit"/>
+}
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript" src="~/Scripts/territoriesValidation.js"></script>
