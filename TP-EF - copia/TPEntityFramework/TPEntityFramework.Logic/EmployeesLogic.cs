@@ -41,6 +41,7 @@ namespace TPEntityFramework.Logic
             updateEmployee.LastName = employee.LastName;
             context.SaveChanges(); 
         }
+
         public Employees GetOne(int id)
         {
             var employee = context.Employees.Find(id);
