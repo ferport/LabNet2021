@@ -14,13 +14,13 @@ namespace TPEntityFramework.Logic
             return context.Territories.ToList();
         }
 
-        public void Add(string id, string description) 
+        public void Add(string id, string description, int region) 
         {
             Territories newTerritorie = new Territories
             {
                 TerritoryID = id,
                 TerritoryDescription = description,
-                RegionID = 1
+                RegionID = region
             };
             context.Territories.Add(newTerritorie);
             context.SaveChanges();

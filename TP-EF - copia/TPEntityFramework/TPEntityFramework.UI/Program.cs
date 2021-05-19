@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TPEntityFramework.Logic;
 using TPEntityFramework.Entities;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Validation;
 
 namespace TPEntityFramework.UI
 {
@@ -17,7 +19,7 @@ namespace TPEntityFramework.UI
             string strId;
             string description;
             string confirm;
-            int numId;
+            int numId = 1;
             int seguir = 0;
             int option;
             TerritoriesLogic territoriesLogic = new TerritoriesLogic();
@@ -51,41 +53,66 @@ namespace TPEntityFramework.UI
                         Console.ReadKey();
                         break;
                     case 3:
+                        
                         Console.Clear();
                         Console.WriteLine("Ingrese un ID");
-                        strId = Console.ReadLine();
-                        if(territoriesLogic.FindId(strId) == 1)
+                        numId = Validations.NumberValidation(Console.ReadLine());
+                        if (numId != 0) 
                         {
-                            Console.WriteLine("Ingrese una descripcion");
-                            description = Console.ReadLine();
-                            territoriesLogic.Add(strId, description);
+                            strId = numId.ToString();
+                            try
+                            {
+                                Console.WriteLine("Ingrese una descripcion");
+                                description = Console.ReadLine();
+                                territoriesLogic.Add(strId, description, 1);
+                            }
+                            catch (DbUpdateException ex)
+                            {
+                                Console.WriteLine("Error al añadir territorio. Id invalido o duplicado");
+                                Console.ReadLine();
+                            }
+                            catch (DbEntityValidationException ex)
+                            {
+                                Console.WriteLine("Error al añadir territorio. Sobrepaso el maximo o minimo de caracteres para el id o la descripcion");
+                                Console.ReadLine();
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Error al añadir territorio.");
+                                Console.ReadLine();
+                            }
                         }
                         else 
                         {
-                            Console.Clear();
-                            Console.WriteLine("ID duplicado");
-                            Console.ReadKey();
+                            Console.WriteLine("Id invalido,solo se permiten numeros.");
+                            Console.ReadLine();
                         }
                         break;
                     case 4:
                         Console.Clear();
-                        Console.WriteLine("Ingrese un ID");
-                        numId = Validations.NumberValidation(Console.ReadLine());
-                        if (employeesLogic.FindId(numId) == 1)
-                        {
+                        try
+                        { 
                             Console.WriteLine("Ingrese el nombre");
                             firstName = Console.ReadLine();
                             Console.WriteLine("Ingrese el apellido");
                             lastName = Console.ReadLine();
                             employeesLogic.Add(numId, firstName, lastName);
                         }
-                        else
+                        catch (DbUpdateException ex)
                         {
-                            Console.Clear();
-                            Console.WriteLine("ID duplicado");
-                            Console.ReadKey();
+                            Console.WriteLine("Error al añadir empleado. Id invalido o duplicado");
+                            Console.ReadLine();
                         }
-                        
+                        catch (DbEntityValidationException ex)
+                        {
+                            Console.WriteLine("Error al añadir empleado. Sobrepaso el maximo o minimo de caracteres del nombre o del apellido");
+                            Console.ReadLine();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error al añadir empleado.");
+                            Console.ReadLine();
+                        }
                         break;
                     case 5:
                         Console.Clear();
@@ -154,7 +181,20 @@ namespace TPEntityFramework.UI
                             show.ShowOneTerritorie(strId);
                             Console.WriteLine("Ingrese la nueva descripcion");
                             description = Console.ReadLine();
-                            territoriesLogic.Update(new Territories(strId, description));
+                            try 
+                            {
+                                territoriesLogic.Update(new Territories(strId, description));
+                            }
+                            catch (DbEntityValidationException ex)
+                            {
+                                Console.WriteLine("Error al modificar territorio. Sobrepaso el maximo o minimo de caracteres para la descripcion");
+                                Console.ReadLine();
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Error al modificar territorio.");
+                                Console.ReadLine();
+                            }
                         }
                         else
                         {
@@ -174,7 +214,20 @@ namespace TPEntityFramework.UI
                             firstName = Console.ReadLine();
                             Console.WriteLine("Ingrese el nuevo apellido");
                             lastName = Console.ReadLine();
-                            employeesLogic.Update(new Employees(numId, firstName, lastName));
+                            try
+                            {
+                                employeesLogic.Update(new Employees(numId, firstName, lastName));
+                            }
+                            catch (DbEntityValidationException ex)
+                            {
+                                Console.WriteLine("Error al modificar empleado. Sobrepaso el maximo o minimo de caracteres del nombre o del apellido");
+                                Console.ReadLine();
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Error al modificar empleado.");
+                                Console.ReadLine();
+                            }
                         }
                         else 
                         {

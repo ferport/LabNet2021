@@ -9,14 +9,20 @@ using TPEntityFramework.Logic;
 using TPApi.Api.Areas.Models;
 using Newtonsoft.Json;
 using System.Web.Script.Serialization;
+using System.Web.Http.Cors;
 
 namespace TPApi.Api.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class EmployeesController : ApiController
     {
+        
         EmployeesLogic employeesLogic = new EmployeesLogic();
+
+        
+
         // GET api/<controller>
-        public string Get()
+        public IHttpActionResult Get()
         {
             List<Employees> employees = employeesLogic.GetAll();
 
@@ -28,7 +34,7 @@ namespace TPApi.Api.Controllers
             }).ToList();
             var json = new JavaScriptSerializer();
             var jsonStringResult = json.Serialize(employeesModel);
-            return jsonStringResult;
+            return Ok(employeesModel);
         }
 
         // GET api/<controller>/5
@@ -46,24 +52,23 @@ namespace TPApi.Api.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public string Add(EmployeeModel employee)
+        public IHttpActionResult Add(EmployeeModel employee)
         {
             try 
             {
-                int id = 0;
-                employeesLogic.Add(id, employee.firstName, employee.lastName);
-                return "OK";
+                employeesLogic.Add(employee.id, employee.firstName, employee.lastName);
+                return Ok();
             }
             catch(Exception ex)
             {
-                return ex.Message;
+                return Content(HttpStatusCode.BadRequest, ex);
             }
             
         }
 
-        // PACH api/<controller>/5
+        // POST api/<controller>/5
         [HttpPost]
-        public string Post(int id, EmployeeModel employeeModel)
+        public IHttpActionResult Post(int id, EmployeeModel employeeModel)
         {
             try 
             {
@@ -71,26 +76,27 @@ namespace TPApi.Api.Controllers
                 employee.FirstName = employeeModel.firstName;
                 employee.LastName = employeeModel.lastName;
                 employeesLogic.Update(employee);
-                return "OK";
+                return Ok();
             }
             catch(Exception ex)
             {
-                return ex.Message;
+                return Content(HttpStatusCode.BadRequest, ex);
             }
             
         }
-
+        
         // DELETE api/<controller>/5
-        public string Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            
             try
             {
                 employeesLogic.Delete(id);
-                return "OK";
+                return Ok();
             }
             catch(Exception ex)
             {
-                return ex.Message;
+                return Content(HttpStatusCode.BadRequest, ex);
             }
             
         }
