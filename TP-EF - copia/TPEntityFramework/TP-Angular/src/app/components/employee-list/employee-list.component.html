@@ -1,0 +1,37 @@
+<div class="container">
+    <table class="table-responsive table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let employee of employees">
+                <th scope="row">{{employee.id}}</th>
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Borrar</button>
+                    <button class="btn btn-info" (click)="updateEmployeeForm(employee.id)" >Modificar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-dark" (click)="insertEmployeeForm()" >Insertar nuevo empleado</button>
+
+    <div *ngIf="showInsert == 0">
+        <employeeInsert></employeeInsert>
+    </div>
+
+    <div *ngIf="showUpdate == 0">
+        <employeeUpdate [idEmployee] = idEmployee></employeeUpdate>
+    </div>
+</div> 
+        
+             
+             
