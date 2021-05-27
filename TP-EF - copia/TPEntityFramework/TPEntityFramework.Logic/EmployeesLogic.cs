@@ -12,41 +12,80 @@ namespace TPEntityFramework.Logic
     {
         public List<Employees> GetAll()
         {
-            return context.Employees.ToList();
-        }
-
-        public void Add(int id, string firstName, string lastName)
-        {
-            Employees newEmployee = new Employees
+            try
             {
-                EmployeeID = id,
-                FirstName = firstName,
-                LastName = lastName
-            };
-            context.Employees.Add(newEmployee);
-            context.SaveChanges();
+                return context.Employees.ToList();
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
 
-        public void Delete(int id)
+        public int Add(int id, string firstName, string lastName)
         {
-            var deleteEmployee = context.Employees.Find(id);
-            context.Employees.Remove(deleteEmployee);
-            context.SaveChanges();   
+            try
+            {
+                Employees newEmployee = new Employees
+                {
+                    EmployeeID = id,
+                    FirstName = firstName,
+                    LastName = lastName
+                };
+                context.Employees.Add(newEmployee);
+                context.SaveChanges();
+                return 0;
+            }
+            catch(Exception ex)
+            {
+                return 1;
+            }
+            
         }
 
-        public void Update(Employees employee)
+        public int Delete(int id)
         {
-            var updateEmployee = context.Employees.Find(employee.EmployeeID);
-            updateEmployee.FirstName = employee.FirstName;
-            updateEmployee.LastName = employee.LastName;
-            context.SaveChanges(); 
+            try 
+            {
+                var deleteEmployee = context.Employees.Find(id);
+                context.Employees.Remove(deleteEmployee);
+                context.SaveChanges();
+                return 0;
+            }
+            catch(Exception ex)
+            {
+                return 1;
+            }
+               
+        }
+
+        public int Update(Employees employee)
+        {
+            try
+            {
+                var updateEmployee = context.Employees.Find(employee.EmployeeID);
+                updateEmployee.FirstName = employee.FirstName;
+                updateEmployee.LastName = employee.LastName;
+                context.SaveChanges();
+                return 0;
+            }
+            catch(Exception ex)
+            {
+                return 1;
+            }
         }
 
         public Employees GetOne(int id)
         {
-            var employee = context.Employees.Find(id);
-
-            return employee;  
+            try
+            {
+                var employee = context.Employees.Find(id);
+                return employee;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public int FindId(int id)

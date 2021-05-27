@@ -17,17 +17,25 @@ namespace TPMVC.MVC.Controllers
         // GET: Territories
         public ActionResult Index()
         {
-
-            List<Employees> employees = employeesLogic.GetAll();
-
-            List<EmployeesView> employeesViews = employees.Select(e => new EmployeesView
+            try
             {
-                id = e.EmployeeID,
-                firstName = e.FirstName,
-                lastName = e.LastName
-            }).ToList();
+                List<Employees> employees = employeesLogic.GetAll();
 
-            return View(employeesViews);
+                List<EmployeesView> employeesViews = employees.Select(e => new EmployeesView
+                {
+                    id = e.EmployeeID,
+                    firstName = e.FirstName,
+                    lastName = e.LastName
+                }).ToList();
+
+                return View(employeesViews);
+            }
+            catch(Exception ex)
+            {
+                ErrorView.errorMessage = "No se pudo cargar la lista de empleados";
+                return RedirectToAction("Index", "Error");
+            }
+            
         }
 
         public ActionResult InsertAndUpdate(string id, string firstName, string lastName)
@@ -76,7 +84,7 @@ namespace TPMVC.MVC.Controllers
                 }
                 catch (Exception ex)
                 {
-                     ErrorView.errorMessage = "Error al guardar el empleado";
+                    ErrorView.errorMessage = "Error al guardar el empleado";
                     return RedirectToAction("Index", "Error");
                 }
             }
@@ -84,8 +92,17 @@ namespace TPMVC.MVC.Controllers
 
         public ActionResult Delete(int id)
         {
-            employeesLogic.Delete(id);
-            return RedirectToAction("Index");
+            try
+            {
+                employeesLogic.Delete(id);
+                return RedirectToAction("Index");
+            }
+            catch(Exception ex)
+            {
+                ErrorView.errorMessage = "Error al borrar el empleado";
+                return RedirectToAction("Index", "Error");
+            }
+            
         }
     }
 }

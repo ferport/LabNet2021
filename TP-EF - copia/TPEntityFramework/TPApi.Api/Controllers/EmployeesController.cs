@@ -24,30 +24,42 @@ namespace TPApi.Api.Controllers
         // GET api/<controller>
         public IHttpActionResult Get()
         {
-            List<Employees> employees = employeesLogic.GetAll();
-
-            List<EmployeeModel> employeesModel = employees.Select(e => new EmployeeModel
+            try
             {
-                id = e.EmployeeID,
-                firstName = e.FirstName,
-                lastName = e.LastName
-            }).ToList();
-            var json = new JavaScriptSerializer();
-            var jsonStringResult = json.Serialize(employeesModel);
-            return Ok(employeesModel);
+                List<Employees> employees = employeesLogic.GetAll();
+
+                List<EmployeeModel> employeesModel = employees.Select(e => new EmployeeModel
+                {
+                    id = e.EmployeeID,
+                    firstName = e.FirstName,
+                    lastName = e.LastName
+                }).ToList();
+                return Ok(employeesModel);
+            }
+            catch(Exception ex)
+            {
+                return Content(HttpStatusCode.BadRequest, ex);
+            }
+            
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            Employees employee = employeesLogic.GetOne(id);
-            EmployeeModel employeeModel = new EmployeeModel();
-            employeeModel.id = employee.EmployeeID;
-            employeeModel.firstName = employee.FirstName;
-            employeeModel.lastName = employee.LastName;
-            var json = new JavaScriptSerializer();
-            var jsonStringResult = json.Serialize(employeeModel);
-            return jsonStringResult;
+            try
+            {
+                Employees employee = employeesLogic.GetOne(id);
+                EmployeeModel employeeModel = new EmployeeModel();
+                employeeModel.id = employee.EmployeeID;
+                employeeModel.firstName = employee.FirstName;
+                employeeModel.lastName = employee.LastName;
+                return Ok(employeeModel);
+            }
+            catch(Exception ex)
+            {
+                return Content(HttpStatusCode.BadRequest, ex);
+            }
+            
         }
 
         // POST api/<controller>

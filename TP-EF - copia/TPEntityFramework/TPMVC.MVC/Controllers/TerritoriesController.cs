@@ -16,16 +16,24 @@ namespace TPMVC.MVC.Controllers
         // GET: Territories
         public ActionResult Index()
         {
-            
-            List<Territories> territories = territoriesLogic.GetAll();
-
-            List<TerritoriesView> territoriesViews = territories.Select(t => new TerritoriesView
+            try
             {
-                id = t.TerritoryID,
-                description = t.TerritoryDescription,
-            }).ToList();
+                List<Territories> territories = territoriesLogic.GetAll();
 
-            return View(territoriesViews);
+                List<TerritoriesView> territoriesViews = territories.Select(t => new TerritoriesView
+                {
+                    id = t.TerritoryID,
+                    description = t.TerritoryDescription,
+                }).ToList();
+
+                return View(territoriesViews);
+            }
+            catch(Exception ex)
+            {
+                ErrorView.errorMessage = "Error al cargar la lista de territorios";
+                return RedirectToAction("Index", "Error");
+            }
+            
         }
 
         public ActionResult InsertAndUpdate(string id, string description)
@@ -65,7 +73,7 @@ namespace TPMVC.MVC.Controllers
             {
                 try
                 {
-                    territoriesLogic.Add(territoriesView.id, territoriesView.description);
+                    territoriesLogic.Add(territoriesView.id, territoriesView.description, 1);
                     return RedirectToAction("Index");
                 }
                 catch (Exception ex)
@@ -78,8 +86,16 @@ namespace TPMVC.MVC.Controllers
 
         public ActionResult Delete(string id)
         {
-            territoriesLogic.Delete(id);
-            return RedirectToAction("Index");
+            try
+            {
+                territoriesLogic.Delete(id);
+                return RedirectToAction("Index");
+            }
+            catch(Exception ex)
+            {
+                ErrorView.errorMessage = "Error al borrar el territorio";
+                return RedirectToAction("Index", "Error");
+            }
         }
     }
 }

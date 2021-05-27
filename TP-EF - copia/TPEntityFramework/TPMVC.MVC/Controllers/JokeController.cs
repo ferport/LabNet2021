@@ -1,24 +1,33 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TPMVC.MVC.Models;
+using TPAPI.Logic;
+using System;
 
 namespace TPMVC.MVC.Controllers
 {
     public class JokeController : Controller
     {
+        JokeLogic jokeLogic = new JokeLogic();
+        
+
         // GET: Joke
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
-            var httpClient = new HttpClient();
-            var json = await httpClient.GetStringAsync("https://geek-jokes.sameerkumar.website/api?format=json");
-            JokeView JokeViews = JsonConvert.DeserializeObject<JokeView>(json);
-            return View(JokeViews);
+            try 
+            {
+                string joke = jokeLogic.GetJoke();
+                JokeView jokeView = new JokeView();
+                jokeView.joke = joke;
+                return View(jokeView);
+            }
+            catch(Exception ex)
+            {
+                ErrorView.errorMessage = "No se pudo recuperar la broma";
+                return RedirectToAction("Index", "Error");
+            }
+            
         }
+        
     }
+
 }

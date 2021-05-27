@@ -9,7 +9,7 @@ namespace TPEntityFramework.Logic
     interface IABMLogic<T>
     {
         List<T> GetAll();
-        void Update(T entity);
+        int Update(T entity);
 
     }
 }
