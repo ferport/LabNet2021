@@ -17,12 +17,12 @@ namespace TPEntityFramework.Logic
             }
             catch(Exception ex)
             {
-                return null;
+                throw ex;
             }
             
         }
 
-        public int Add(string id, string description, int region) 
+        public void Add(string id, string description, int region) 
         {
             try
             {
@@ -34,42 +34,39 @@ namespace TPEntityFramework.Logic
                 };
                 context.Territories.Add(newTerritorie);
                 context.SaveChanges();
-                return 0;
             }
             catch(Exception ex)
             {
-                return 1;
+                throw ex;
             }
             
         }
 
-        public int Delete(string id)
+        public void Delete(string id)
         {
             try
             {
                 var deleteTerritorie = context.Territories.Find(id);
                 context.Territories.Remove(deleteTerritorie);
                 context.SaveChanges();
-                return 0;
             }
             catch(Exception ex)
             {
-                return 1;
+                throw ex;
             }
         }
 
-        public int Update(Territories territorie)
+        public void Update(Territories territorie)
         {
             try
             {
                 var updateTerritorie = context.Territories.Find(territorie.TerritoryID);
                 updateTerritorie.TerritoryDescription = territorie.TerritoryDescription;
                 context.SaveChanges();
-                return 0;
             }
             catch(Exception ex)
             {
-                return 1;
+                throw ex;
             }
         }
 
@@ -83,7 +80,7 @@ namespace TPEntityFramework.Logic
             }
             catch(Exception ex)
             {
-                return null;
+                throw ex;
             }
                
         }

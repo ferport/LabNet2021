@@ -18,11 +18,11 @@ namespace TPEntityFramework.Logic
             }
             catch(Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
 
-        public int Add(int id, string firstName, string lastName)
+        public void Add(int id, string firstName, string lastName)
         {
             try
             {
@@ -34,32 +34,30 @@ namespace TPEntityFramework.Logic
                 };
                 context.Employees.Add(newEmployee);
                 context.SaveChanges();
-                return 0;
             }
             catch(Exception ex)
             {
-                return 1;
+                throw ex;
             }
             
         }
 
-        public int Delete(int id)
+        public void Delete(int id)
         {
             try 
             {
                 var deleteEmployee = context.Employees.Find(id);
                 context.Employees.Remove(deleteEmployee);
                 context.SaveChanges();
-                return 0;
             }
             catch(Exception ex)
             {
-                return 1;
+                throw ex;
             }
                
         }
 
-        public int Update(Employees employee)
+        public void Update(Employees employee)
         {
             try
             {
@@ -67,11 +65,10 @@ namespace TPEntityFramework.Logic
                 updateEmployee.FirstName = employee.FirstName;
                 updateEmployee.LastName = employee.LastName;
                 context.SaveChanges();
-                return 0;
             }
             catch(Exception ex)
             {
-                return 1;
+                throw ex;
             }
         }
 
@@ -84,7 +81,7 @@ namespace TPEntityFramework.Logic
             }
             catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
 

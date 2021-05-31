@@ -1,4 +1,5 @@
-﻿using TPAPI.Data;
+﻿using System;
+using TPAPI.Data;
 
 
 namespace TPAPI.Logic
@@ -13,9 +14,9 @@ namespace TPAPI.Logic
             {
                 return jokeApi.GetJoke();
             }
-            catch
+            catch(Exception ex)
             {
-                return null;
+                throw ex;
             }      
         }
  

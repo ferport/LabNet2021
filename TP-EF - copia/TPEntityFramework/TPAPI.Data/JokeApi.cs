@@ -36,7 +36,7 @@ namespace TPAPI.Data
             }
             catch (WebException ex)
             {
-                return null;
+                throw ex;
             }
         }
 
